@@ -1,5 +1,6 @@
 # 랜선 자르기
 # 이분 탐색/ 매개 변수 탐색
+# import sys 활용?
 
 k,n = map(int,input().split())
 lan_list = []
@@ -25,3 +26,4 @@ while start <= end:
         end = mid - 1
 
 print(end)
+
