@@ -19,7 +19,7 @@ print(n_list[n//2])
 
 # 최빈값
 cnt = Counter(n_list).most_common()
-print(cnt)
+
 if len(cnt) > 1 and cnt[0][1] == cnt[1][1]:
     print(cnt[1][0])
 else:
