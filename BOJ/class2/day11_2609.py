@@ -11,12 +11,12 @@ print(math.lcm(n,m))
 # 유클리드 호제법
 n,m = map(int,input().split())
 
-def gcd(x,y):
+def gcd(x,y): # 최대공약수
     while y > 0:
         x,y = y, x % y
     return x
 
-def lcm(x,y):
+def lcm(x,y): # 최소공배수
     return x * y // gcd(x,y)
 
 print(gcd(n,m))
