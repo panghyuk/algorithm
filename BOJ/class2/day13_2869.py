@@ -3,8 +3,6 @@
 import math
 
 a,b,v = map(int,input().split())
-
-# 날짜 계산: (a - b) * n + a = v
-day = math.ceil((v-a)/(a-b))+1 # math.ceil: 올림
+day = math.ceil((v-b)/(a-b)) # 목표 높이: v - b
 print(day)
 
