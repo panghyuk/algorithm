@@ -15,8 +15,8 @@ while start <= end:
     cnt = 0 # 잘린 나무의 총합
 
     for i in tree:
-        if mid < i:
-            cnt += i - mid    
+        if mid < i: # mid보다 크면 나무 자름
+            cnt += (i - mid)
 
     if cnt < m:
         end = mid - 1
