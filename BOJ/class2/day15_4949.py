@@ -4,14 +4,14 @@
 import sys
 
 while True:
-    str = sys.stdin.readline().rstrip()
+    str_ = sys.stdin.readline().rstrip()
     stack = []
     ans = 0
 
-    if str == '.':
+    if str_ == '.':
         break
 
-    for i in str:
+    for i in str_:
         if i == '[' or i == '(':
             stack.append(i)
         elif i == ')':
