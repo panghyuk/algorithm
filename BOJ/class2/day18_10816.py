@@ -1,7 +1,6 @@
 # 숫자 카드 2
 # 이분탐색/ 해시
 
-# sol.1
 n = int(input())
 arr1 = list(map(int,input().split()))
 dict1 = {}
