@@ -1,9 +1,11 @@
 # 숫자 카드 2
-# 이분탐색/ 해시
+# 이분탐색/해시
 
+# sol.1 딕셔너리
 n = int(input())
 arr1 = list(map(int,input().split()))
 dict1 = {}
+
 for i in arr1:
     if i in dict1:
         dict1[i] += 1
