@@ -1,4 +1,5 @@
 # 덱
+
 import sys
 
 n = int(input())
