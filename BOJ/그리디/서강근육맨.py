@@ -8,7 +8,6 @@ muscle = list(map(int,input().split()))
 muscle.sort()
 m = 0
 
-
 if len(muscle) % 2 == 0: # 개수가 짝수일 때
     for i in range(n//2):
         m = max(m,muscle[i]+muscle[n-i-1])
