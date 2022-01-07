@@ -10,7 +10,7 @@ for i in range(n):
 
 meets.sort(key = lambda x:(x[1],x[0]))
 cnt = 0
-end = -1
+end = 0
 
 for meet in meets:
     if end <= meet[0]:
