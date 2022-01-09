@@ -1,4 +1,5 @@
 # 1260
+# DFS, BFS
 
 import sys
 from collections import deque
