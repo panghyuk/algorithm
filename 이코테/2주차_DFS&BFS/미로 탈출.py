@@ -26,7 +26,7 @@ def bfs(x,y):
 n,m = map(int,input().split())
 graph = []
 
-for _ in range(m):
+for _ in range(n):
     graph.append(list(map(int,input().split())))
 
 # 상/하/좌/우 방향 벡터 정의

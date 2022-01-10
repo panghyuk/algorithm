@@ -20,7 +20,7 @@ n,m = map(int,input().split())
 graph = []
 cnt = 0
 
-for _ in range(m):
+for _ in range(n):
     graph.append(list(map(int,input().split())))
 
 for i in range(n):
