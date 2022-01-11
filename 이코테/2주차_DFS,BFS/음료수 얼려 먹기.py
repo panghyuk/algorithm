@@ -21,10 +21,10 @@ graph = []
 cnt = 0
 
 for _ in range(n):
-    graph.append(list(map(int,input().split())))
+    graph.append(list(map(int,input())))
 
 for i in range(n):
     for j in range(m):
-        if dfs(i,j) == True:
+        if dfs(i,j) == True: # 현재 위치에서 DFS 수행
             cnt += 1
 print(cnt)
