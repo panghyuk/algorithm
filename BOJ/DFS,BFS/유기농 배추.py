@@ -1,4 +1,5 @@
 # 1012
+
 from collections import deque
 import sys
 
@@ -41,6 +42,7 @@ for _ in range(t):
                 cnt += 1
 
     print(cnt)
+
 
 # # 내 풀이_DFS(런타임에러)
 # import sys

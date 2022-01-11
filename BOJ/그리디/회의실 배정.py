@@ -1,4 +1,5 @@
 # 1931
+
 import sys
 
 n = int(input())
