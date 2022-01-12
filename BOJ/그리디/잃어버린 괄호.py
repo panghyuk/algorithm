@@ -1,7 +1,6 @@
 # 1541
 
 data = input().split('-')
-print(data)
 result = 0
 
 for i in data[0].split('+'):

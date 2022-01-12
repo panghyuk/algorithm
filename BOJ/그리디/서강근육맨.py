@@ -5,7 +5,7 @@ import sys
 input = sys.stdin.readline
 n = int(input())
 muscle = list(map(int,input().split()))
-muscle.sort()
+muscle.sort() # 오름차순 정렬
 m = 0
 
 if len(muscle) % 2 == 0: # 개수가 짝수일 때
