@@ -44,38 +44,38 @@ for _ in range(t):
     print(cnt)
 
 
-# 내 풀이_DFS(런타임에러)
 
-import sys
-# 재귀 최대 깊이 설정
-sys.setrecursionlimit(10**6)
-input = sys.stdin.readline
-t = int(input())
+# # DFS 풀이
+# import sys
+# sys.setrecursionlimit(10**6) # 재귀 최대 깊이 설정
 
-def dfs(x,y):
-    if x <= -1 or x >= n or y <= -1 or y >= m:
-        return False
-    if graph[y][x] == 1:
-        graph[y][x] = 0
-        dfs(x-1,y)
-        dfs(x,y-1)
-        dfs(x+1,y)
-        dfs(x,y+1)
-        return True
-    return False
+# input = sys.stdin.readline
+# t = int(input())
 
-for _ in range(t):
-    m,n,k = map(int,input().split())
-    graph = [([0] * m) for _ in range(n)]
-    for i in range(k):
-        a,b = map(int,input().split())
-        graph[b][a] = 1
+# def dfs(x,y):
+#     if x <= -1 or x >= n or y <= -1 or y >= m:
+#         return False
+#     if graph[x][y] == 1:
+#         graph[x][y] = 0
+#         dfs(x-1,y)
+#         dfs(x,y-1)
+#         dfs(x+1,y)
+#         dfs(x,y+1)
+#         return True
+#     return False
 
-    cnt = 0
+# for _ in range(t):
+#     m,n,k = map(int,input().split())
+#     graph = [([0] * m) for _ in range(n)]
+#     for i in range(k):
+#         a,b = map(int,input().split())
+#         graph[b][a] = 1
 
-    for i in range(m):
-        for j in range(n):
-            if dfs(i,j) == True:
-                cnt += 1
+#     cnt = 0
 
-    print(cnt)
+#     for i in range(n):
+#         for j in range(m):
+#             if dfs(i,j) == True:
+#                 cnt += 1
+
+#     print(cnt)
