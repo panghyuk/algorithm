@@ -29,12 +29,13 @@ def bfs():
                     q.append((nx,ny))
 
 bfs()
-ans = 0
+res = 0
 
-for row in graph:
-    for x in row:
-        if x == 0:
+for i in range(n):
+    for j in range(m):
+        if graph[i][j] == 0:
             print(-1)
             exit()
-    ans = max(max(row),ans)
-print(ans - 1)
+    res = max(max(graph[i]),res)
+
+print(res - 1)
