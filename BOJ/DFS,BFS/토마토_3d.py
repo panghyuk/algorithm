@@ -16,13 +16,12 @@ for i in range(h):
         tmp.append(list(map(int,input().split())))
         for k in range(m):
             if tmp[j][k] == 1:
-                q.append((i,j,k))
+                q.append((i,j,k)) # z,x,y 순서
     graph.append(tmp)
 
 def bfs():
-    
     while q:
-        x,y,z = q.popleft()
+        z,x,y = q.popleft()
 
         for i in range(6):
             nx = x + dx[i]
@@ -30,8 +29,8 @@ def bfs():
             nz = z + dz[i]
 
             if 0 <= nx < h and 0 <= ny < n and 0 <= nz < m:
-                if graph[nx][ny][nz] == 0:
-                    graph[nx][ny][nz] = graph[x][y][z] + 1
+                if graph[nz][nx][ny] == 0:
+                    graph[nz][nx][ny] = graph[z][x][y] + 1
                     q.append((nx,ny,nz))
 
 bfs()

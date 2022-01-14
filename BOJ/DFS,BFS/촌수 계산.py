@@ -18,6 +18,7 @@ def bfs(num):
     q = deque()
     q.append(num)
     visit[num] = True
+    
     while q:
         v = q.popleft()
         for i in graph[v]:

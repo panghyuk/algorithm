@@ -7,7 +7,6 @@ dy = [0,0,-1,1]
 
 n,m = map(int,input().split())
 graph = []
-visit = []
 
 for _ in range(n):
     graph.append(list(map(int,input())))
