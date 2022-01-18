@@ -1,4 +1,5 @@
 # 7795
+# 이분 탐색 활용
 
 import sys, bisect
 
