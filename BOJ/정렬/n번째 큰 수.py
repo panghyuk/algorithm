@@ -1,18 +1,22 @@
 # 2075
 
-# 내 풀이 메모리 초과
-import sys
-from collections import deque
+import sys, heapq
 
-n_list = []
 input = sys.stdin.readline 
-
 n = int(input())
+heap = []
+
 for _ in range(n):
-    n_list += (list(map(int,input().split())))
+    nums = list(map(int,input().split()))
 
-n_list.sort(reverse = True)
-q = deque()
-q.append(n_list)
+    if not heap: # heap이 비어 있을 때 (처음 입력이 들어올 때)
+        for num in nums:
+            heapq.heappush(heap,num)
+    
+    else:
+        for num in nums:
+            if heap[0] < num:
+                heapq.heappush(heap,num) # heap에 원소 추가
+                heapq.heappop(heap) # heap에서 제일 작은 원소 삭제
 
-print(q[0][n-1])
+print(heap[0])
