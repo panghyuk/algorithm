@@ -29,4 +29,3 @@ if result:
     print(cnt)
 else:
     print(-1)
-
