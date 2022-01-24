@@ -1,4 +1,4 @@
-# 재귀적 구현
+''' 재귀적 구현 '''
 
 def binary(arr,target,start,end):
     if start > end:
@@ -28,7 +28,7 @@ else:
     print(result + 1)
 
 
-# 반복문 구현
+''' 반복문 구현 '''
 
 def binary(arr,target,start,end):
     while start <= end:
@@ -57,7 +57,7 @@ else:
     print(result + 1)
 
 
-# 파이썬 이진 탐색 라이브러리
+''' 파이썬 이진 탐색 라이브러리 '''
 
 from bisect import bisect_left,bisect_right
 
@@ -68,7 +68,7 @@ print(bisect_left(a,x))
 print(bisect_right(a,x))
 
 
-# 값이 특정 범위에 속하는 데이터 개수 구하기
+''' 값이 특정 범위에 속하는 데이터 개수 구하기 '''
 
 from bisect import bisect_left,bisect_right
 
