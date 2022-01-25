@@ -1,6 +1,6 @@
 # 8979
 
-# 리스트 활용 (100점)
+''' 리스트 활용 (100점) '''
 n,k = map(int,input().split())
 ranking = [[] for _ in range(n+1)]
 
@@ -23,29 +23,26 @@ for i in range(1,n+1):
 print(cnt)
 
 
-# # sort(key=lambda 활용) 20점 풀이
-# n,k = map(int,input().split())
-# ranking = []
+''' 희찬's 풀이 '''
 
-# for i in range(n):
-#     ranking.append(list(map(int,input().split())))
+n,k = map(int,input().split())
+nations = [list(map(int,input().split())) for _ in range(n)]
 
-# ranking.sort(key = lambda x: (-x[1], -x[2], -x[3]))
+#1.금메달(1) 2.은메달(2) 3.동메달(3)
+nations.sort(key=lambda x:(-x[1],-x[2],-x[3]))
+cnt = 0
 
-# cnt = 1
+for i in range(n):
+  cnt += 1
+  if nations[i][0] == k:
+    if i == 0:
+      print(cnt)
+      break
 
-# for idx in range(n):
-#     if ranking[idx][0] == k:
-#         k = idx
+    if nations[i-1][1:] == nations[i][1:]: # 동점 처리
+      cnt -= 1
+      print(cnt)
+      break
 
-# for i in range(n):
-#     if ranking[k][1] < ranking[i][1]:
-#         cnt += 1
-#     elif ranking[k][1] == ranking[i][1]:
-#         if ranking[k][2] < ranking[i][2]:
-#             cnt += 1
-#         elif ranking[k][2] == ranking[i][2]:
-#             if ranking[k][3] < ranking[i][3]:
-#                 cnt += 1
-
-# print(cnt)
+    print(cnt)
+    break

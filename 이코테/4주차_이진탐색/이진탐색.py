@@ -34,12 +34,12 @@ def binary(arr,target,start,end):
     while start <= end:
         mid = (start + end) // 2
         # 찾은 경우 중간점 인덱스 반환
-    if arr[mid] == target:
-        return mid
-    elif arr[mid] > target:
-        end = mid - 1
-    else:
-        start = mid + 1
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] > target:
+            end = mid - 1
+        else:
+            start = mid + 1
     
     return None
 
