@@ -18,9 +18,9 @@ while start <= end:
     cnt = 0
 
     for x in jewerly:
-        if x % mid == 0:
+        if x % mid == 0: # mid로 나누어 떨어질 때
             cnt += x // mid
-        else:
+        else: # mid로 나누어 떨어지지 않을 때
             cnt += x // mid + 1
     
     if cnt > n:
