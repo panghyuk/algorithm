@@ -19,8 +19,6 @@ for x in n_list:
     else:
         cnt[x] = 1
 
-print(cnt)
-
 def binary(arr,target,start,end):
     if start > end:
         return 0
