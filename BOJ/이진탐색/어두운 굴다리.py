@@ -33,4 +33,3 @@ else:
             end = mid - 1
 
 print(ans)
-

@@ -8,7 +8,6 @@ guitar = list(map(int,input().split()))
 
 start = max(guitar) # 가장 작은 크기의 블루레이
 end = sum(guitar) # 가장 큰 크기의 블루레이
-ans = 0
 
 while start <= end:
     mid = (start + end) // 2
@@ -31,7 +30,6 @@ while start <= end:
         start = mid + 1
 
 print(start)
-
 
 
 

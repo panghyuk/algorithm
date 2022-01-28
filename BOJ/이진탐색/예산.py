@@ -7,12 +7,14 @@ n = int(input())
 budget = list(map(int,input().split()))
 m = int(input())
 
-start = 0
+start = 1
 end = max(budget)
+ans = 0
 
 while start <= end:
-    total = 0
     mid = (start + end) // 2
+    total = 0
+
     for x in budget:
         if x > mid:
             total += mid
@@ -23,5 +25,6 @@ while start <= end:
         end = mid - 1
     else:
         start = mid + 1
+        ans = mid
 
-print(end)
+print(ans)
