@@ -6,10 +6,11 @@ for i in range(n):
 
 d = [10001] * (m + 1)
 
+# Bottom-Up 방식
 d[0] = 0
 
-for i in range(n):
-    for j in range(arr[i],m+1):
+for i in range(n): # i: 화폐 단위
+    for j in range(arr[i],m+1): # j: 화폐 금액
         if d[j - arr[i]] != 10001: # (i-k)원을 만드는 방법이 존재하는 경우
             d[j] = min(d[j],d[j - arr[i]] + 1)
 

@@ -3,6 +3,7 @@ arr = list(map(int,input().split()))
 
 d = [0] * 100
 
+# Bottom-Up 방식
 d[0] = arr[0]
 d[1] = max(arr[0],arr[1])
 
