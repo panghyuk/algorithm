@@ -1,4 +1,4 @@
-# 11053
+# 11053 (LIS)
 
 n = int(input())
 arr = list(map(int,input().split()))
