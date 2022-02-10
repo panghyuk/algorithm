@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-INF = int(1e9)
+INF = int(1e9) # 무한을 의미하는 값으로 10억을 설정
 
 n,m = map(int,input().split())
 start = int(input())
