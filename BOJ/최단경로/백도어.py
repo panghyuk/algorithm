@@ -23,7 +23,7 @@ dis[0] = 0
 
 while q:
     d, now = heapq.heappop(q)
-    if d > dis[now]:
+    if dis[now] < d:
         continue
 
     for i in graph[now]:
