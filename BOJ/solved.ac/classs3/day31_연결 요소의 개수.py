@@ -1,6 +1,6 @@
 # 11724
 import sys
-sys.setrecursionlimit(1000000)
+sys.setrecursionlimit(1000000) # 최대 재귀 깊이 설정
 input = sys.stdin.readline
 
 def dfs(num):
