@@ -1,4 +1,4 @@
-# 4386
+# 4386 크루스칼 알고리즘
 import math
 
 def find(parent,x):

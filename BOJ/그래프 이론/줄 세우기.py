@@ -1,4 +1,4 @@
-# 2252
+# 2252 위상정렬
 
 from collections import deque
 
