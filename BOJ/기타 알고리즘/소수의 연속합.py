@@ -6,7 +6,7 @@ input = sys.stdin.readline
 # 에라토스테네스의 체
 n = int(input())
 prime = []
-arr = [True for i in range(n+1)]
+arr = [True for _ in range(n+1)]
 
 for i in range(2,int(math.sqrt(n))+1):
     if arr[i]: 
