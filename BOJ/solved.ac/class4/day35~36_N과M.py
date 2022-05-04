@@ -1,4 +1,4 @@
-# # 15649 백트래킹
+# # 15649 백트래킹(1)
 # n,m = map(int,input().split())
 # ans = []
 
@@ -16,7 +16,7 @@
 
 # dfs()
 
-# # 15650 백트래킹(dfs)
+# # 15650 백트래킹(2)
 # n,m = map(int,input().split())
 # ans = []
 
@@ -33,7 +33,7 @@
 
 # dfs(1)
 
-# # 15651 백트래킹
+# # 15651 백트래킹(3)
 # n,m = map(int,input().split())
 # ans = []
 
@@ -49,7 +49,7 @@
 
 # dfs()
 
-# # 15652 백트래킹
+# # 15652 백트래킹(4)
 # n,m = map(int,input().split())
 # ans = []
 
@@ -71,7 +71,8 @@
 
 # dfs()
 
-# # 15654 백트래킹
+# # 15654 백트래킹(5)
+# ''' sol.1'''
 # n,m = map(int,input().split())
 # n_list = list(map(int,input().split()))
 # n_list.sort()
@@ -82,6 +83,7 @@
 #     if len(ans) == m:
 #         print(" ".join(map(str,ans)))
 #         return
+
 #     for i in range(n):
 #         if not visit[i]:
 #             visit[i] = True
@@ -91,4 +93,79 @@
 #             visit[i] = False # 방문 False로 다시 돌려놓기
 # dfs()
 
-# 15656
+# ''' sol.2 '''
+# n,m = map(int,input().split())
+# n_list = list(map(int,input().split()))
+# n_list.sort()
+# ans = []
+
+# def dfs():
+#     if len(ans) == m:
+#         print(" ".join(map(str,ans)))
+#         return
+        
+#     for i in range(n):
+#         if n_list[i] not in ans :
+#             ans.append(n_list[i])
+#             dfs()
+#             ans.pop()
+# dfs()
+
+# # 15655 백트래킹(6)
+# n,m = map(int,input().split())
+# n_list = list(map(int,input().split()))
+# n_list.sort()
+# ans = []
+
+# def dfs(s):
+#     if len(ans) == m:
+#         print(" ".join(map(str,ans)))
+#         return
+        
+#     for i in range(s,n):
+#         if n_list[i] not in ans :
+#             ans.append(n_list[i])
+#             dfs(i+1)
+#             ans.pop()
+# dfs(0)
+
+# # 15656 백트래킹(7)
+# n,m = map(int,input().split())
+# n_list = list(map(int,input().split()))
+# n_list.sort()
+# ans = []
+
+# def dfs():
+#     if len(ans) == m:
+#         print(" ".join(map(str,ans)))
+#         return
+#     for i in range(n):
+#         ans.append(n_list[i])
+#         dfs()
+#         ans.pop()
+
+# dfs()
+
+# 15657 백트래킹(8)
+n,m = map(int,input().split())
+n_list = list(map(int,input().split()))
+n_list.sort()
+ans = []
+
+def dfs(s):
+    if len(ans) == m:
+        print(" ".join(map(str,ans)))
+        return
+        
+    for i in range(s,n):
+        if len(ans) == 0:
+            ans.append(n_list[i])
+            dfs(s)
+            ans.pop()
+        else:
+            if n_list[i] >= ans[-1]:
+                ans.append(n_list[i])
+                dfs(s)
+                ans.pop()
+
+dfs(0)
