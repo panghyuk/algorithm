@@ -1,4 +1,5 @@
 # 2960
+
 n,k = map(int,input().split())
 cnt = 0
 arr = [True] * (n+1)
