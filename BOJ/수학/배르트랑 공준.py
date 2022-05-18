@@ -25,7 +25,7 @@ while True:
     if n == 0:
         break
 
-    for i in prime_num:
+    for i in prime_num: # 시간초과 해결!
         if n < i <= 2 * n:
             cnt += 1
     
