@@ -16,7 +16,7 @@ def bfs(s1,s2,e1,e2):
         if a == e1 and b == e2: # 최종 목표와 일치하면 break
             break
 
-        for i in range(8):
+        for i in range(8): # 체스판 이동 경우
             nx = a + dx[i]
             ny = b + dy[i]
 
