@@ -6,6 +6,31 @@ card.sort()
 m = int(input())
 given = list(map(int,input().split()))
 
+cnt = {}
+
+for x in card:
+    if x in cnt:
+        cnt[x] += 1
+    else:
+        cnt[x] = 1
+
+s,e = 0,len(card)
+
+def bin(arr,tar,s,e):
+    if s > e:
+        return 0
+    mid = (s+e) // 2
+
+    if arr[mid] == tar:
+        return cnt[tar]
+    elif arr[mid] > tar:
+        return bin(arr, tar, s, mid - 1)
+    else:
+        return bin(arr, tar, mid + 1, e)
+
+for i in given:
+    print(bin(card, i, 0, len(card)-1), end = " ")
+    
 
 
 ''' 딕셔너리 활용 '''
