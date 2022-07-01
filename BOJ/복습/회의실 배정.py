@@ -14,9 +14,6 @@ end = 0
 for i in meet:
     if end <= i[0]:
         end = i[1]
-        cnt += 1
-        
+        cnt += 1     
 
 print(cnt)
-
-# print(meet)
