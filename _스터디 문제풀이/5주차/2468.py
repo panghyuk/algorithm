@@ -27,17 +27,17 @@ def bfs(a,b,height):
             ny = y + dy[i]
 
             if 0 <= nx < n and 0 <= ny < n:
-                if graph[nx][ny] > height and visit[nx][ny] == 0:
+                if graph[nx][ny] >= height and visit[nx][ny] == 0:
                     visit[nx][ny] = 1
                     q.append([nx,ny])
 
-for h in range(1,max_h):
-    visit = [([0] * n) for _ in range(n)]
+for h in range(1,max_h + 1):
+    visit = [[0] * n for _ in range(n)]
     cnt = 0
 
     for j in range(n):
         for k in range(n):
-            if graph[j][k] > h and visit[j][k] == 0:
+            if graph[j][k] >= h and visit[j][k] == 0:
                 bfs(j,k,h)
                 cnt += 1
     
