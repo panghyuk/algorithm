@@ -9,7 +9,7 @@ q = int(input())
 for _ in range(q):
     num, s, b = map(int,input().split())
     num = list(str(num))
-    cnt = 0
+    cnt = 0 # n_list에서 제거된 개수
 
     for i in range(len(n_list)):
         s_cnt = 0
@@ -22,7 +22,7 @@ for _ in range(q):
             elif int(num[j]) in n_list[i]: # num의 자리수가 n_list 안에 있을 때
                 b_cnt += 1
         
-        if s_cnt != s or b_cnt != b:
+        if s_cnt != s or b_cnt != b: # s 개수와 b 개수가 다르면 n_list에서 제거
             n_list.remove(n_list[i])
             cnt += 1
 
