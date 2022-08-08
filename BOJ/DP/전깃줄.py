@@ -1,10 +1,16 @@
-# 2565
-n = int(input())
-elec_a = [0]
-elec_b = [0]
+# 2565 LIS
 
-for i in range(1,n+1):
-    a,b = map(int,input().split())
-    elec_a.append(a)
-    elec_b.append(b)
-    
+n = int(input())
+elec = []
+dp = [1] * n
+
+for _ in range(n):
+    elec.append(list(map(int,input().split())))
+elec.sort()
+
+for i in range(n):
+    for j in range(i):
+        if elec[i][1] > elec[j][1]:
+            dp[i] = max(dp[i], dp[j] + 1)
+
+print(n - max(dp))
