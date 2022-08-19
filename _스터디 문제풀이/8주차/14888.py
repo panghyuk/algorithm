@@ -34,10 +34,8 @@ for permu in permus:
             ans /= n_list[l]
             ans = int(ans)
     
-    if ans > maxnum:
-        maxnum = ans
-    if ans < minnum:
-        minnum = ans
+    maxnum = max(ans,maxnum)
+    minnum = min(ans,minnum)
 
 print(maxnum)
 print(minnum)
