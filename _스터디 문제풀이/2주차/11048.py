@@ -1,3 +1,5 @@
+# 이동하기
+
 n,m = map(int,input().split())
 arr = [[0] * (m+1)]
 dp = [[0] * (m+1)] * (n+1)

@@ -1,3 +1,5 @@
+# 스위치 켜고 끄기
+
 n = int(input())
 array = [0] + list(map(int,input().split()))
 st = int(input())

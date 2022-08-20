@@ -1,4 +1,5 @@
 # 벽 부수고 이동하기
+
 from collections import deque
 
 n,m = map(int,input().split())
