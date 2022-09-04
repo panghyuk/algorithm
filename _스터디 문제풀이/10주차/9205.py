@@ -12,14 +12,14 @@ def bfs(a,b):
 
     while q:
         x,y = q.popleft()
-        if abs(x - festival[0]) + abs(y - festival[1]) <= 1000: # 갈 수 있는 거리: 맥주 20병 * 50미터
+        if abs(x - festival[0]) + abs(y - festival[1]) <= 1000: # 현재 위치에서 페스티벌 위치까지 <= 맥주 20병 * 50미터 (= 1000)
             return 1
 
         for i in range(n):
             if not visit[i]:
                 nx, ny = gs[i]
 
-                if abs(x - nx) + abs(y - ny) <= 1000:
+                if abs(x - nx) + abs(y - ny) <= 1000: # 현재 위치에서 편의점 위치까지 <= 맥주 20병 * 50미터 (= 1000)
                     q.append([nx,ny])
                     visit[i] = 1
     return 0
